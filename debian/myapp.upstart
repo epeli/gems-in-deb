@@ -5,6 +5,6 @@ stop on shutdown
 
 chdir /var/lib/myapp
 env RACK_ENV=production
-exec sudo -E -u myappuser bundle ruby server.rb
+exec sudo -E -u myappuser bundle exec ruby1.9.1 server.rb
 
 respawn
