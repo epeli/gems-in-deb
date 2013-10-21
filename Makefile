@@ -14,9 +14,11 @@ clean:
 install-dirs:
 	mkdir -p $(DESTDIR)$(install_dir)
 
-install: install-dirs
+clean-test:
 	bundle install --deployment --without test
 	bundle clean
+
+install: clean-test install-dirs
 	cp -a server.rb Gemfile Gemfile.lock .bundle vendor $(DESTDIR)$(install_dir)
 
 deb:
