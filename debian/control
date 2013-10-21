@@ -1,0 +1,13 @@
+Source: myapp
+Section: utils
+Priority: extra
+Maintainer: Esa-Matti Suuronen <esa-matti.suuronen@opinsys.fi>
+Build-Depends: debhelper (>= 8), ruby1.9.1, ruby-bundler
+Standards-Version: 3.9.3
+Homepage: http://github.com/epeli/
+
+Package: myapp
+Architecture: any
+Depends: ${misc:Depends}, ruby1.9.1, ruby-bundler
+Description: myapp
+ My app in a debian package
